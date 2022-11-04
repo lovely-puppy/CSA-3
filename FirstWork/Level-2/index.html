@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEVEL-2</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #grid {
+            margin: 50px auto;
+            display: grid;
+            width: 1200px;
+            height: 800px;
+            border: 10px solid skyblue;
+            grid-template-columns: repeat(5, 200px);
+            grid-template-rows: repeat(5, 100px);
+            grid-template-areas: 
+            'a b c d e'
+            'f g g h i'
+            'j g g k k'
+            'l m n k k'
+            'o p q r s';
+            /* grid-auto-flow: dense; */
+            align-content: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        .item {
+            font-size: 50px;
+            color: rgb(36, 19, 150);
+            background-color: #e91e63;
+        }
+        .item-1{
+            background-color: red;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            line-height: 100px;
+        }
+        .item-2{
+            background-color: rgb(67, 67, 233);
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            line-height: 100px;
+        }
+        .item-3{
+            background-color: pink;
+            width: 100%;
+            height: 100px;
+            text-align: center;
+            line-height: 100px;
+        }
+        .item-4{
+            background-color: orange;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            line-height: 100px;
+        }
+        .item-5{
+            background-color:cornsilk;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            line-height: 100px;
+        }
+        .item-6 {
+            background-color: darkkhaki;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            line-height: 100px;
+        }
+        .item-7 {
+            background-color: violet;
+            grid-row: 2 / 4;
+            grid-column: 2 / 4;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            line-height: 200px;
+        }
+        .item-8 {
+            background-color: lightseagreen;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            line-height: 100px;
+        }
+        .item-9 {
+            background-color: rgb(72, 139, 206);
+            grid-row: 4 / 6;
+            grid-column: 3 / 5;
+            grid-area: k;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            line-height: 200px;
+        }
+        .item-10 {
+            background-color: greenyellow;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            line-height: 100px;
+        }
+        .item-11 {
+            background-color:deepskyblue;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            line-height: 100px;
+        }
+        .item-12 {
+            background-color: dodgerblue;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            line-height: 100px;
+        }
+        .item-13 {
+            background-color: sienna;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            line-height: 100px;
+        }
+        .item-14 {
+            background-color: teal;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            line-height: 100px;
+        }
+        .item-15 {
+            background-color: aqua;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            line-height: 100px;
+        }
+        .item-16 {
+            background-color: darkolivegreen;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            line-height: 100px;
+        }
+        .item-17 {
+            background-color: darkslategrey;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            line-height: 100px;
+        }
+        .item-18 {
+            background-color: magenta;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            line-height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div id="grid">
+        <div class="item item-1">1</div>
+        <div class="item item-2">2</div>
+        <div class="item item-3">3</div>
+        <div class="item item-4">4</div>
+        <div class="item item-5">5</div>
+        <div class="item item-6">6</div>
+        <div class="item item-7">7</div>
+        <div class="item item-8">8</div>
+        <div class="item item-9">9</div>
+        <div class="item item-10">10</div>
+        <div class="item item-11">11</div>
+        <div class="item item-12">12</div>
+        <div class="item item-13">13</div>
+        <div class="item item-14">14</div>
+        <div class="item item-15">15</div>
+        <div class="item item-16">16</div>
+        <div class="item item-17">17</div>
+        <div class="item item-18">18</div>
+    </div>
+</body>
+</html>

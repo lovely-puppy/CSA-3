@@ -1,0 +1,220 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+.main {
+  width: 100%;
+  height: 100%;
+  background: url(../img/3.jpg) no-repeat;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  background-position: right 0;
+}
+.main .head {
+  margin-top: 10px;
+  width: 100%;
+  height: 40px;
+  position: relative;
+}
+.main .head .left {
+  position: absolute;
+  margin-left: 10%;
+  height: 40px;
+}
+.main .head .left .logo {
+  width: 21px;
+  height: 21px;
+  float: left;
+  margin-top: 10px;
+}
+.main .head .left .logo .lt {
+  float: left;
+  width: 10px;
+  height: 10px;
+  background-color: #f26522;
+  margin-right: 1px;
+  margin-bottom: 1px;
+}
+.main .head .left .logo .lb {
+  float: left;
+  width: 10px;
+  height: 10px;
+  background-color: #00aeef;
+  margin-right: 1px;
+}
+.main .head .left .logo .rb {
+  float: left;
+  width: 10px;
+  height: 10px;
+  background-color: #ffc20e;
+}
+.main .head .left .logo .rt {
+  float: left;
+  width: 10px;
+  height: 10px;
+  background-color: #8dc63f;
+}
+.main .head .left .title {
+  float: left;
+  width: 150px;
+  height: 100%;
+  line-height: 40px;
+  color: #FFF;
+  white-space: nowrap;
+  font-weight: 600;
+  font-size: 16px;
+  margin-left: 10px;
+}
+.main .head .middle ul {
+  position: absolute;
+  margin-left: 25%;
+  width: 400px;
+  height: 40px;
+}
+.main .head .middle ul li {
+  float: left;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  margin-right: 40px;
+}
+.main .head .middle ul li a {
+  line-height: 40px;
+  height: 40px;
+  color: #E1D6D0;
+}
+.main .head .right {
+  position: absolute;
+  margin-left: 80%;
+  height: 40px;
+}
+.main .head .right .info {
+  float: left;
+  text-align: center;
+  line-height: 40px;
+  height: 40px;
+  width: 80px;
+  color: #fff;
+}
+.main .head .right .info .photo {
+  float: right;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  background-color: #fff;
+  cursor: pointer;
+  overflow: hidden;
+}
+.main .head .right .info .photo img {
+  width: 40px;
+  height: 40px;
+}
+.main .head .right .meau {
+  float: right;
+  height: 40px;
+  width: 40px;
+  margin-top: 12px;
+  margin-left: 40px;
+  cursor: pointer;
+}
+.main .head .right .meau div {
+  width: 20px;
+  height: 2px;
+  margin-bottom: 5px;
+  background-color: #fff;
+}
+.main .contain {
+  width: 800px;
+  height: 150px;
+  margin-top: 100px;
+  margin-left: 25%;
+  position: relative;
+}
+.main .contain .top {
+  float: left;
+  height: 30px;
+  width: 100%;
+  margin-top: 15px;
+}
+.main .contain .top .left {
+  height: 30px;
+  width: 80px;
+  line-height: 30px;
+  text-align: center;
+  margin-left: 20px;
+  margin-right: 10px;
+  float: left;
+  background-color: #fff;
+  border-radius: 15px;
+  color: #0c0c0c;
+}
+.main .contain .top .right {
+  height: 30px;
+  width: 80px;
+  line-height: 30px;
+  text-align: center;
+  float: left;
+  background-color: #fff;
+  opacity: 0.7;
+  border-radius: 15px;
+}
+.main .contain .bottom {
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  margin-left: 15px;
+  margin-top: 50px;
+}
+.main .contain .bottom .search {
+  width: 100%;
+}
+.main .contain .bottom .search input {
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  height: 60px;
+  width: 600px;
+  border-radius: 30px;
+  padding-left: 40px;
+  font-size: 20px;
+  text-shadow: 0px 0px 0px #000;
+  -webkit-text-fill-color: #4d90a0;
+}
+.main .contain .bottom .search input:focus {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+.main .footer {
+  width: 100%;
+  height: 40px;
+  position: absolute;
+  bottom: 0px;
+  background-color: #333;
+  padding: 0 150px 0 150px;
+}
+.main .footer ul {
+  width: 100%;
+}
+.main .footer ul li {
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  float: left;
+  margin-right: 30px;
+}
+.main .footer ul li a {
+  color: #666;
+  font-size: 13px;
+}
+.main .footer ul .right {
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+}
+.main .footer ul .right a {
+  color: #666;
+  font-size: 13px;
+}
