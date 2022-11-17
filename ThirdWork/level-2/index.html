@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEVEL-2</title>
+</head>
+
+<body>
+    <h1 style="display:block;margin:100px auto;width:200px;color:red;">LEVEL-2</h1>
+
+    <script type="text/javascript">
+        /*
+        浅拷贝是只拷贝第一层，修改第一层的某个值且该值不是引用类型，
+        那么修改拷贝对象，被拷贝对象的该值不会改变，即该指针指向的是在堆内存中
+        新分配的一个内存。如果是嵌套的对象，修改拷贝对象第二层及以后的任意值，
+        被拷贝对象的相应值也会发生改变，这两个指针都是指向堆内存中被拷贝对象
+        的那块内存，修改任意的值，内存的地址都会发生变化。
+        */
+       /*
+       深拷贝是递归处理所有对象，将原对象中的值全部拷贝到新对象中，
+       两个指针分别指向不同的内存，修改其中一个指针的指向都不会影响另外的指针。
+       */
+        function clone(target) {
+            let cloneTarget = {};
+            for (const key in target) {
+                cloneTarget[key] = target[key];
+            }
+            return cloneTarget;
+        };
+
+        function deepClone(target) {
+            if (typeof target === 'object') {
+                let cloneTarget = Array.isArray(target) ? [] : {};
+                for (const key in target) {
+                    cloneTarget[key] = deepClone(target[key]);
+                }
+                return cloneTarget;
+            } else {
+                return target;
+            }
+        }
+        const target1 = {
+            field1: 1,
+            field2: {
+                age: undefined,
+            },
+            field3: {
+                child: 'child'
+            },
+            field4: [2, 4, 8]
+        };
+        const target2 = {
+            field1: 1,
+            field2: {
+                age: undefined,
+            },
+            field3: {
+                child: 'child'
+            },
+            field4: [2, 4, 8]
+        };
+        console.log("===============浅拷贝==================");
+        let newTarget1 = clone(target1);
+        console.log(target1);
+        console.log(newTarget1);
+        console.log("修改值后：");
+        newTarget1.field1 = 2;
+        newTarget1.field2.age = 18;
+        newTarget1.field3.child = "孙悟空";
+        console.log(target1);
+        console.log(newTarget1);
+        console.log("================深拷贝================")
+        let newTarget2 = deepClone(target2);
+        console.log(target2);
+        console.log(newTarget2);
+        console.log("修改值后：");
+        newTarget2.field1 = 2;
+        newTarget2.field2.age = 18;
+        newTarget2.field3.child = "孙悟空";
+        console.log(target2);
+        console.log(newTarget2);
+    </script>
+</body>
+
+</html>

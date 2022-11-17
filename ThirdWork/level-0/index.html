@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEVEL-0</title>
+</head>
+
+<body>
+    <h1 style="display:block;margin:100px auto;width:200px;color:red;">LEVEL-0</h1>
+
+    <script type="text/javascript">
+        const person = {
+            name: 'bbh',
+            age: 30,
+            address: {
+                city: 'ChongQing',
+                area: 'NanShan'
+            },
+            title: ['student', { year: 2022, title: 'GoodStudent' }]
+        }
+
+        //解构赋值
+        const {
+            name, 
+            age:year,
+            address:{
+                city, 
+                area:mountain
+            }, 
+            title: [title1, {title:title2}]
+        } = person;
+
+        const arr = Array.prototype.slice.call(title2, 0, 4);
+        arr.splice(1, 1);
+        let title3 = "";
+        for (const key in arr) {
+            title3 += arr[key];
+        }        
+
+
+        console.log(name) // bbh
+        console.log(year) // 30
+        console.log(city) // ChongQing 
+        console.log(mountain) // NanShan //这里没有写错，就是要输出NanShan，结合课件
+        console.log(title1) // student
+        console.log(title2) // GoodStudent
+        console.log(title3) // God 结合课件
+    </script>
+</body>
+
+</html>

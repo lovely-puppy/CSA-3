@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEVEL-1</title>
+</head>
+<body>
+    <h1 style="display:block;margin:100px auto;width:200px;color:red;">LEVEL-1</h1>
+
+    <script type="text/javascript">
+        //用尾递归实现阶乘计算
+        function factorial1(n, res) {
+            if (n == 1) return res;
+            return arguments.callee(n-1, res*n);
+        }
+        console.log(factorial1(10, 1));
+
+        //用循环实现阶乘计算
+        function factorial2(n) {
+            let res = 1;
+            while (n > 0) {
+                res *= n;
+                n -- ;
+            }
+            return res;
+        }
+        console.log(factorial2(10));
+    </script>
+</body>
+</html>
