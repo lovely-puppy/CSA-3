@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEVEL-1</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: aqua;
+        }
+        #blue{
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            border-radius: 50%;
+            /* animation: move 1s linear forwards; */
+        }
+        #orange {
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+            border-radius: 50%;
+            /* animation: move 1s linear 1s forwards; */
+        }
+        #gray {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: darkslategray;
+            /* animation: move 1s linear 2s forwards; */
+        }
+        @keyframes move {
+            100% {
+                transform: translate(250px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="blue"></div>
+    <div id="orange"></div>
+    <div id="gray"></div>
+
+    <script type="text/javascript">
+        let blue = document.querySelector('#blue');
+        let orange = document.querySelector('#orange');
+        let gray = document.querySelector('#gray');
+
+        // 方式一setTimeout定时器嵌套
+        setTimeout(() => {
+            blue.style.animation = 'move 1s linear forwards';
+            setTimeout(() => {
+                orange.style.animation = 'move 1s linear forwards';
+                setTimeout(() => {
+                    gray.style.animation = 'move 1s linear forwards';
+                }, 1000);
+            }, 1000);
+        }, 1000);
+
+
+
+        // Promise链式调用
+        // const p = new Promise((resolve, reject) => {
+        //     console.log('开始链式调用');
+        //     resolve();
+        // }).then(res => {
+        //     setTimeout(() => {
+        //         console.log('调用第一个');
+        //         blue.style.animation = 'move 1s linear forwards';
+        //     }, 1000);
+        //     return 'OK';
+        // }).then((res) => {
+        //     setTimeout(() => {
+        //         console.log('调用第二个');
+        //         orange.style.animation = 'move 1s linear forwards';
+        //     }, 2000);
+        //     return 'OK';
+        // }).then(res => {
+        //     setTimeout(() => {
+        //         console.log('调用第三个');
+        //         gray.style.animation = 'move 1s linear forwards';
+        //     }, 3000);
+        //     return 'OK';
+        // }).catch(e => {
+        //     throw new Error(e);
+        // });
+
+
+
+        //async await 异步队列
+        // async function move() {
+        //     console.log('调用开始');
+        //     await new Promise((resolve) => {
+        //         setTimeout(() => {
+        //             blue.style.animation = 'move 1s linear forwards';
+        //             resolve();
+        //         }, 1000);
+        //     });
+        //     await new Promise((resolve) => {
+        //         setTimeout(() => {
+        //             orange.style.animation = 'move 1s linear forwards';
+        //             resolve();
+        //         }, 1000);
+        //     });
+        //     await new Promise((resolve) => {
+        //         setTimeout(() => {
+        //             gray.style.animation = 'move 1s linear forwards';
+        //             resolve();
+        //         }, 1000);
+        //     });
+        //     return '调用结束';
+        // };
+        // move().then(res => console.log(res));
+    </script>
+</body>
+</html>
