@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        #outer {
+            width: 600px;
+            height: auto;
+            margin: auto;
+            margin-top: 150px;
+            background-color: lightgrey;
+            padding: 10px;
+            background-image: url('https://pic.616pic.com/bg_w1180/00/18/60/IvACrGcfs3.jpg');
+            background-position: 100px;
+        }
+        #msg-board{
+            box-sizing: border-box;
+            width: 500px;
+            height: 350px;
+            background-color: lightcyan;
+            margin-left: 50px;
+            padding: 20px;
+        }
+        #msg-board > div{
+            border: 1px solid darkgrey;
+        }
+        #msg-board > div > span {
+            float:right;
+            margin-right: 150px;
+        }
+        #reg-log{
+            width: 350px;
+            margin-left: 125px;
+            margin-bottom: 10px;
+        }
+        #post-msg{
+            width: 220px;
+            margin-left: 190px;
+            margin-top: 10px;
+        }
+        #register{
+            border-radius: 15%;
+            border-color: aliceblue;
+        }
+        #login{
+            border-radius: 15%;
+            border-color: aliceblue;
+        }
+        #send-msg{
+            border-radius: 15%;
+            border-color: aliceblue;
+        }
+        #all-mes{
+            margin-left: 250px;
+        }
+    </style>
+</head>
+<body>
+    <div id="outer">
+        <div id="reg-log">
+            <div id="inner-reg">username: <input type="text" id="input1"><button id="register">register</button></div>
+            <div id="inner-log">username: <input type="text" id="input2"><button id="login">login</button></div>
+        </div>
+        <div id="msg-board">
+            <!-- <div>
+                <div style="font-size:18px;font-weight: 500;">蓝莓</div>
+                <img src="https://cdn.acwing.com/media/user/profile/photo/142423_lg_4ef8ccb608.jpeg" alt="" style="height:40px;width:40px">
+                <span>一起来玩啊</span>
+            </div> -->
+        </div>
+        <div id="post-msg"><input type="text" id="input3"><button id="send-msg">post</button></div>
+        <button id="all-mes">getAllMessage</button>
+    </div>
+
+    
+
+    
+
+</body>
+
+    <script src="./message.js" type="text/javascript"></script>
+    
+    <script src="./index.js" type="text/javascript"></script>
+</html>
